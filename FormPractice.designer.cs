@@ -43,7 +43,6 @@
             this.ButtonStopSingle = new System.Windows.Forms.Button();
             this.ButtonStartSingle = new System.Windows.Forms.Button();
             this.TabPageMultiple = new System.Windows.Forms.TabPage();
-            this.LabelInstructionsMultiple = new System.Windows.Forms.Label();
             this.TableLayoutPanelMultiple = new System.Windows.Forms.TableLayoutPanel();
             this.LabelDigitMultiple2 = new System.Windows.Forms.Label();
             this.LabelDigitMultiple8 = new System.Windows.Forms.Label();
@@ -60,6 +59,7 @@
             this.LabelTimeMultiple = new System.Windows.Forms.Label();
             this.ButtonStopMultiple = new System.Windows.Forms.Button();
             this.ButtonStartMultiple = new System.Windows.Forms.Button();
+            this.LabelInstructionsMultiple = new System.Windows.Forms.Label();
             this.TabControlPractice.SuspendLayout();
             this.TabPageSingle.SuspendLayout();
             this.TabPageMultiple.SuspendLayout();
@@ -206,8 +206,6 @@
             // 
             // TabPageMultiple
             // 
-            this.TabPageMultiple.Controls.Add(this.LabelInstructionsMultiple);
-            this.TabPageMultiple.Controls.Add(this.TableLayoutPanelMultiple);
             this.TabPageMultiple.Controls.Add(this.CheckBoxSymbolsMultiple);
             this.TabPageMultiple.Controls.Add(this.LabelKphMultiple);
             this.TabPageMultiple.Controls.Add(this.LabelBadMultiple);
@@ -215,6 +213,8 @@
             this.TabPageMultiple.Controls.Add(this.LabelTimeMultiple);
             this.TabPageMultiple.Controls.Add(this.ButtonStopMultiple);
             this.TabPageMultiple.Controls.Add(this.ButtonStartMultiple);
+            this.TabPageMultiple.Controls.Add(this.LabelInstructionsMultiple);
+            this.TabPageMultiple.Controls.Add(this.TableLayoutPanelMultiple);
             this.TabPageMultiple.Location = new System.Drawing.Point(4, 22);
             this.TabPageMultiple.Name = "TabPageMultiple";
             this.TabPageMultiple.Padding = new System.Windows.Forms.Padding(3);
@@ -223,20 +223,8 @@
             this.TabPageMultiple.Text = "Multiple Numbers Practice";
             this.TabPageMultiple.UseVisualStyleBackColor = true;
             // 
-            // LabelInstructionsMultiple
-            // 
-            this.LabelInstructionsMultiple.Location = new System.Drawing.Point(31, 38);
-            this.LabelInstructionsMultiple.Name = "LabelInstructionsMultiple";
-            this.LabelInstructionsMultiple.Size = new System.Drawing.Size(561, 322);
-            this.LabelInstructionsMultiple.TabIndex = 21;
-            this.LabelInstructionsMultiple.Text = "Click Start to begin.";
-            this.LabelInstructionsMultiple.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // TableLayoutPanelMultiple
             // 
-            this.TableLayoutPanelMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TableLayoutPanelMultiple.ColumnCount = 8;
             this.TableLayoutPanelMultiple.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.TableLayoutPanelMultiple.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -254,11 +242,12 @@
             this.TableLayoutPanelMultiple.Controls.Add(this.LabelDigitMultiple4, 2, 0);
             this.TableLayoutPanelMultiple.Controls.Add(this.LabelDigitMultiple3, 1, 0);
             this.TableLayoutPanelMultiple.Controls.Add(this.LabelDigitMultiple1, 0, 0);
-            this.TableLayoutPanelMultiple.Location = new System.Drawing.Point(9, 94);
+            this.TableLayoutPanelMultiple.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TableLayoutPanelMultiple.Location = new System.Drawing.Point(3, 3);
             this.TableLayoutPanelMultiple.Name = "TableLayoutPanelMultiple";
             this.TableLayoutPanelMultiple.RowCount = 1;
             this.TableLayoutPanelMultiple.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TableLayoutPanelMultiple.Size = new System.Drawing.Size(605, 207);
+            this.TableLayoutPanelMultiple.Size = new System.Drawing.Size(617, 392);
             this.TableLayoutPanelMultiple.TabIndex = 22;
             // 
             // LabelDigitMultiple2
@@ -266,77 +255,84 @@
             this.LabelDigitMultiple2.AutoSize = true;
             this.LabelDigitMultiple2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelDigitMultiple2.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDigitMultiple2.Location = new System.Drawing.Point(78, 0);
+            this.LabelDigitMultiple2.Location = new System.Drawing.Point(80, 0);
             this.LabelDigitMultiple2.Name = "LabelDigitMultiple2";
-            this.LabelDigitMultiple2.Size = new System.Drawing.Size(69, 207);
+            this.LabelDigitMultiple2.Size = new System.Drawing.Size(71, 392);
             this.LabelDigitMultiple2.TabIndex = 7;
             this.LabelDigitMultiple2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelDigitMultiple2.Resize += new System.EventHandler(this.LabelDigitMultiple_Resize);
             // 
             // LabelDigitMultiple8
             // 
             this.LabelDigitMultiple8.AutoSize = true;
             this.LabelDigitMultiple8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelDigitMultiple8.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDigitMultiple8.Location = new System.Drawing.Point(528, 0);
+            this.LabelDigitMultiple8.Location = new System.Drawing.Point(542, 0);
             this.LabelDigitMultiple8.Name = "LabelDigitMultiple8";
-            this.LabelDigitMultiple8.Size = new System.Drawing.Size(74, 207);
+            this.LabelDigitMultiple8.Size = new System.Drawing.Size(72, 392);
             this.LabelDigitMultiple8.TabIndex = 6;
             this.LabelDigitMultiple8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelDigitMultiple8.Resize += new System.EventHandler(this.LabelDigitMultiple_Resize);
             // 
             // LabelDigitMultiple7
             // 
             this.LabelDigitMultiple7.AutoSize = true;
             this.LabelDigitMultiple7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelDigitMultiple7.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDigitMultiple7.Location = new System.Drawing.Point(453, 0);
+            this.LabelDigitMultiple7.Location = new System.Drawing.Point(465, 0);
             this.LabelDigitMultiple7.Name = "LabelDigitMultiple7";
-            this.LabelDigitMultiple7.Size = new System.Drawing.Size(69, 207);
+            this.LabelDigitMultiple7.Size = new System.Drawing.Size(71, 392);
             this.LabelDigitMultiple7.TabIndex = 5;
             this.LabelDigitMultiple7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelDigitMultiple7.Resize += new System.EventHandler(this.LabelDigitMultiple_Resize);
             // 
             // LabelDigitMultiple6
             // 
             this.LabelDigitMultiple6.AutoSize = true;
             this.LabelDigitMultiple6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelDigitMultiple6.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDigitMultiple6.Location = new System.Drawing.Point(378, 0);
+            this.LabelDigitMultiple6.Location = new System.Drawing.Point(388, 0);
             this.LabelDigitMultiple6.Name = "LabelDigitMultiple6";
-            this.LabelDigitMultiple6.Size = new System.Drawing.Size(69, 207);
+            this.LabelDigitMultiple6.Size = new System.Drawing.Size(71, 392);
             this.LabelDigitMultiple6.TabIndex = 4;
             this.LabelDigitMultiple6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelDigitMultiple6.Resize += new System.EventHandler(this.LabelDigitMultiple_Resize);
             // 
             // LabelDigitMultiple5
             // 
             this.LabelDigitMultiple5.AutoSize = true;
             this.LabelDigitMultiple5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelDigitMultiple5.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDigitMultiple5.Location = new System.Drawing.Point(303, 0);
+            this.LabelDigitMultiple5.Location = new System.Drawing.Point(311, 0);
             this.LabelDigitMultiple5.Name = "LabelDigitMultiple5";
-            this.LabelDigitMultiple5.Size = new System.Drawing.Size(69, 207);
+            this.LabelDigitMultiple5.Size = new System.Drawing.Size(71, 392);
             this.LabelDigitMultiple5.TabIndex = 3;
             this.LabelDigitMultiple5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelDigitMultiple5.Resize += new System.EventHandler(this.LabelDigitMultiple_Resize);
             // 
             // LabelDigitMultiple4
             // 
             this.LabelDigitMultiple4.AutoSize = true;
             this.LabelDigitMultiple4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelDigitMultiple4.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDigitMultiple4.Location = new System.Drawing.Point(228, 0);
+            this.LabelDigitMultiple4.Location = new System.Drawing.Point(234, 0);
             this.LabelDigitMultiple4.Name = "LabelDigitMultiple4";
-            this.LabelDigitMultiple4.Size = new System.Drawing.Size(69, 207);
+            this.LabelDigitMultiple4.Size = new System.Drawing.Size(71, 392);
             this.LabelDigitMultiple4.TabIndex = 2;
             this.LabelDigitMultiple4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelDigitMultiple4.Resize += new System.EventHandler(this.LabelDigitMultiple_Resize);
             // 
             // LabelDigitMultiple3
             // 
             this.LabelDigitMultiple3.AutoSize = true;
             this.LabelDigitMultiple3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelDigitMultiple3.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDigitMultiple3.Location = new System.Drawing.Point(153, 0);
+            this.LabelDigitMultiple3.Location = new System.Drawing.Point(157, 0);
             this.LabelDigitMultiple3.Name = "LabelDigitMultiple3";
-            this.LabelDigitMultiple3.Size = new System.Drawing.Size(69, 207);
+            this.LabelDigitMultiple3.Size = new System.Drawing.Size(71, 392);
             this.LabelDigitMultiple3.TabIndex = 1;
             this.LabelDigitMultiple3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelDigitMultiple3.Resize += new System.EventHandler(this.LabelDigitMultiple_Resize);
             // 
             // LabelDigitMultiple1
             // 
@@ -345,9 +341,10 @@
             this.LabelDigitMultiple1.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelDigitMultiple1.Location = new System.Drawing.Point(3, 0);
             this.LabelDigitMultiple1.Name = "LabelDigitMultiple1";
-            this.LabelDigitMultiple1.Size = new System.Drawing.Size(69, 207);
+            this.LabelDigitMultiple1.Size = new System.Drawing.Size(71, 392);
             this.LabelDigitMultiple1.TabIndex = 0;
             this.LabelDigitMultiple1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelDigitMultiple1.Resize += new System.EventHandler(this.LabelDigitMultiple_Resize);
             // 
             // CheckBoxSymbolsMultiple
             // 
@@ -425,6 +422,15 @@
             this.ButtonStartMultiple.UseVisualStyleBackColor = true;
             this.ButtonStartMultiple.Click += new System.EventHandler(this.ButtonStartMultiple_Click);
             this.ButtonStartMultiple.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormDisplay_KeyDown);
+            // 
+            // LabelInstructionsMultiple
+            // 
+            this.LabelInstructionsMultiple.Location = new System.Drawing.Point(31, 38);
+            this.LabelInstructionsMultiple.Name = "LabelInstructionsMultiple";
+            this.LabelInstructionsMultiple.Size = new System.Drawing.Size(561, 322);
+            this.LabelInstructionsMultiple.TabIndex = 21;
+            this.LabelInstructionsMultiple.Text = "Click Start to begin.";
+            this.LabelInstructionsMultiple.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormPractice
             // 

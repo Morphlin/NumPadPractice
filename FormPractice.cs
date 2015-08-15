@@ -19,7 +19,6 @@ namespace NumPadPractice
         {
             Rand = new Random(3652165);
             Watch = new Stopwatch();
-            //TabControlPractice.TabPages.Remove(TabPageMultiple); //To remove when multiple ready.
         }
     
         private KeyValuePair<Keys, string> CurrentKey;
@@ -237,7 +236,10 @@ namespace NumPadPractice
 
         private void ButtonStartMultiple_Click(object sender, EventArgs e)
         {
-            //LabelPracticeSingle_Resize(null, null);
+            foreach (Label Label in TableLayoutPanelMultiple.Controls)
+            {
+                LabelDigitMultiple_Resize(Label, null);
+            }
             LabelInstructionsMultiple.Visible = false;
             GoodMultipleCounter = 0;
             BadMultipleCounter = 0;
@@ -268,6 +270,11 @@ namespace NumPadPractice
             ButtonStartMultiple.Enabled = true;
             CheckBoxSymbolsMultiple.Enabled = true;
             ButtonStopMultiple.Enabled = false;
+        }
+
+        private void LabelDigitMultiple_Resize(object sender, EventArgs e)
+        {
+            ((Label)sender).Font = new Font(((Label)sender).Font.FontFamily, Width / 7, ((Label)sender).Font.Style);
         }
 
         private void TimerDisplayWatch_Tick(object sender, EventArgs e)
