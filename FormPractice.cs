@@ -17,7 +17,7 @@ namespace NumPadPractice
         private Stopwatch Watch;
         private void FormDisplay_Load(object sender, EventArgs e)
         {
-            Rand = new Random(3652165);
+            Rand = new Random();
             Watch = new Stopwatch();
         }
     
@@ -49,6 +49,7 @@ namespace NumPadPractice
                     LabelPracticeSingle.ForeColor = Color.Red;
                     System.Media.SystemSounds.Asterisk.Play();
                 }
+                return;
             }
             if (PracticeMultipleEnabled)
             {
@@ -190,6 +191,14 @@ namespace NumPadPractice
                             System.Media.SystemSounds.Asterisk.Play();
                         }
                         break;
+                }
+                return;
+            }
+            if (TabControlPractice.SelectedTab == TabPageMultiple)
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    ButtonStartMultiple_Click(null, null);
                 }
             }
         }
