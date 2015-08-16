@@ -143,7 +143,7 @@
             // 
             this.LabelKphSingle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LabelKphSingle.AutoSize = true;
-            this.LabelKphSingle.Location = new System.Drawing.Point(353, 373);
+            this.LabelKphSingle.Location = new System.Drawing.Point(350, 373);
             this.LabelKphSingle.Name = "LabelKphSingle";
             this.LabelKphSingle.Size = new System.Drawing.Size(54, 13);
             this.LabelKphSingle.TabIndex = 13;
@@ -154,7 +154,7 @@
             // 
             this.LabelBadSingle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LabelBadSingle.AutoSize = true;
-            this.LabelBadSingle.Location = new System.Drawing.Point(287, 373);
+            this.LabelBadSingle.Location = new System.Drawing.Point(284, 373);
             this.LabelBadSingle.Name = "LabelBadSingle";
             this.LabelBadSingle.Size = new System.Drawing.Size(47, 13);
             this.LabelBadSingle.TabIndex = 12;
@@ -165,7 +165,7 @@
             // 
             this.LabelGoodSingle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LabelGoodSingle.AutoSize = true;
-            this.LabelGoodSingle.Location = new System.Drawing.Point(216, 373);
+            this.LabelGoodSingle.Location = new System.Drawing.Point(213, 373);
             this.LabelGoodSingle.Name = "LabelGoodSingle";
             this.LabelGoodSingle.Size = new System.Drawing.Size(52, 13);
             this.LabelGoodSingle.TabIndex = 11;
@@ -176,7 +176,7 @@
             // 
             this.LabelTimeSingle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LabelTimeSingle.AutoSize = true;
-            this.LabelTimeSingle.Location = new System.Drawing.Point(97, 373);
+            this.LabelTimeSingle.Location = new System.Drawing.Point(94, 373);
             this.LabelTimeSingle.Name = "LabelTimeSingle";
             this.LabelTimeSingle.Size = new System.Drawing.Size(97, 13);
             this.LabelTimeSingle.TabIndex = 10;
@@ -199,7 +199,7 @@
             // ButtonStartSingle
             // 
             this.ButtonStartSingle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ButtonStartSingle.Location = new System.Drawing.Point(9, 368);
+            this.ButtonStartSingle.Location = new System.Drawing.Point(6, 368);
             this.ButtonStartSingle.Name = "ButtonStartSingle";
             this.ButtonStartSingle.Size = new System.Drawing.Size(75, 23);
             this.ButtonStartSingle.TabIndex = 0;
@@ -253,7 +253,7 @@
             // 
             this.LabelKphMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LabelKphMultiple.AutoSize = true;
-            this.LabelKphMultiple.Location = new System.Drawing.Point(353, 373);
+            this.LabelKphMultiple.Location = new System.Drawing.Point(350, 373);
             this.LabelKphMultiple.Name = "LabelKphMultiple";
             this.LabelKphMultiple.Size = new System.Drawing.Size(54, 13);
             this.LabelKphMultiple.TabIndex = 20;
@@ -264,7 +264,7 @@
             // 
             this.LabelBadMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LabelBadMultiple.AutoSize = true;
-            this.LabelBadMultiple.Location = new System.Drawing.Point(287, 373);
+            this.LabelBadMultiple.Location = new System.Drawing.Point(284, 373);
             this.LabelBadMultiple.Name = "LabelBadMultiple";
             this.LabelBadMultiple.Size = new System.Drawing.Size(47, 13);
             this.LabelBadMultiple.TabIndex = 19;
@@ -275,7 +275,7 @@
             // 
             this.LabelGoodMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LabelGoodMultiple.AutoSize = true;
-            this.LabelGoodMultiple.Location = new System.Drawing.Point(216, 373);
+            this.LabelGoodMultiple.Location = new System.Drawing.Point(213, 373);
             this.LabelGoodMultiple.Name = "LabelGoodMultiple";
             this.LabelGoodMultiple.Size = new System.Drawing.Size(52, 13);
             this.LabelGoodMultiple.TabIndex = 18;
@@ -286,7 +286,7 @@
             // 
             this.LabelTimeMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LabelTimeMultiple.AutoSize = true;
-            this.LabelTimeMultiple.Location = new System.Drawing.Point(97, 373);
+            this.LabelTimeMultiple.Location = new System.Drawing.Point(94, 373);
             this.LabelTimeMultiple.Name = "LabelTimeMultiple";
             this.LabelTimeMultiple.Size = new System.Drawing.Size(97, 13);
             this.LabelTimeMultiple.TabIndex = 17;
@@ -309,7 +309,7 @@
             // ButtonStartMultiple
             // 
             this.ButtonStartMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ButtonStartMultiple.Location = new System.Drawing.Point(9, 368);
+            this.ButtonStartMultiple.Location = new System.Drawing.Point(6, 368);
             this.ButtonStartMultiple.Name = "ButtonStartMultiple";
             this.ButtonStartMultiple.Size = new System.Drawing.Size(75, 23);
             this.ButtonStartMultiple.TabIndex = 0;
