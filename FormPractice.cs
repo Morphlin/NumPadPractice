@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Diagnostics;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace NumPadPractice
@@ -29,9 +30,11 @@ namespace NumPadPractice
         private int GoodMultipleCounter;
         private int BadMultipleCounter;
         private int PositionMultiple = 1;
+        private List<double> KphHistory = new List<double>();
 
         private void FormDisplay_KeyDown(object sender, KeyEventArgs e)
         {
+            //if (sender == CheckBoxSymbolsSingle || sender == CheckBoxSymbolsMultiple) return;
             if (PracticeSingleEnabled)
             {
                 LabelPracticeSingle.ForeColor = Color.Black;
@@ -194,7 +197,14 @@ namespace NumPadPractice
                 }
                 return;
             }
-            if (TabControlPractice.SelectedTab == TabPageMultiple)
+            if ((TabControlPractice.SelectedTab == TabPageSingle && !PracticeSingleEnabled))
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    ButtonStartSingle_Click(null, null);
+                }
+            }
+            if (TabControlPractice.SelectedTab == TabPageMultiple && !PracticeMultipleEnabled)
             {
                 if (e.KeyCode == Keys.Enter)
                 {
@@ -229,6 +239,7 @@ namespace NumPadPractice
             LabelPracticeSingle.Text = CurrentKey.Value;
             PracticeSingleEnabled = true;
             ButtonStartSingle.Enabled = false;
+            CheckBoxSymbolsSingle.Enabled = false;
             ButtonStopSingle.Enabled = true;
             Focus();
         }
@@ -240,6 +251,7 @@ namespace NumPadPractice
             Watch.Stop();
             TimerDisplayWatch.Enabled = false;
             ButtonStartSingle.Enabled = true;
+            CheckBoxSymbolsSingle.Enabled = true;
             ButtonStopSingle.Enabled = false;
         }
 
@@ -279,6 +291,10 @@ namespace NumPadPractice
             ButtonStartMultiple.Enabled = true;
             CheckBoxSymbolsMultiple.Enabled = true;
             ButtonStopMultiple.Enabled = false;
+            var KPH = GoodMultipleCounter * (3600000 / Watch.Elapsed.TotalMilliseconds);
+            if (KPH > 0) LabelKphMultiple.Text = string.Format("KPH : {0}", KPH.ToString("0").PadLeft(5));
+            if (Watch.Elapsed > TimeSpan.Zero) KphHistory.Add(KPH);
+            if (KphHistory.Count > 0) LabelKphAverageMultiple.Text = string.Format("Average KPH : {0}", KphHistory.Average().ToString("0").PadLeft(5));
         }
 
         private void LabelDigitMultiple_Resize(object sender, EventArgs e)

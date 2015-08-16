@@ -43,6 +43,15 @@
             this.ButtonStopSingle = new System.Windows.Forms.Button();
             this.ButtonStartSingle = new System.Windows.Forms.Button();
             this.TabPageMultiple = new System.Windows.Forms.TabPage();
+            this.LabelKphAverageMultiple = new System.Windows.Forms.Label();
+            this.CheckBoxSymbolsMultiple = new System.Windows.Forms.CheckBox();
+            this.LabelKphMultiple = new System.Windows.Forms.Label();
+            this.LabelBadMultiple = new System.Windows.Forms.Label();
+            this.LabelGoodMultiple = new System.Windows.Forms.Label();
+            this.LabelTimeMultiple = new System.Windows.Forms.Label();
+            this.ButtonStopMultiple = new System.Windows.Forms.Button();
+            this.ButtonStartMultiple = new System.Windows.Forms.Button();
+            this.LabelInstructionsMultiple = new System.Windows.Forms.Label();
             this.TableLayoutPanelMultiple = new System.Windows.Forms.TableLayoutPanel();
             this.LabelDigitMultiple2 = new System.Windows.Forms.Label();
             this.LabelDigitMultiple8 = new System.Windows.Forms.Label();
@@ -52,14 +61,6 @@
             this.LabelDigitMultiple4 = new System.Windows.Forms.Label();
             this.LabelDigitMultiple3 = new System.Windows.Forms.Label();
             this.LabelDigitMultiple1 = new System.Windows.Forms.Label();
-            this.CheckBoxSymbolsMultiple = new System.Windows.Forms.CheckBox();
-            this.LabelKphMultiple = new System.Windows.Forms.Label();
-            this.LabelBadMultiple = new System.Windows.Forms.Label();
-            this.LabelGoodMultiple = new System.Windows.Forms.Label();
-            this.LabelTimeMultiple = new System.Windows.Forms.Label();
-            this.ButtonStopMultiple = new System.Windows.Forms.Button();
-            this.ButtonStartMultiple = new System.Windows.Forms.Button();
-            this.LabelInstructionsMultiple = new System.Windows.Forms.Label();
             this.TabControlPractice.SuspendLayout();
             this.TabPageSingle.SuspendLayout();
             this.TabPageMultiple.SuspendLayout();
@@ -124,7 +125,7 @@
             this.LabelInstructionSingle.Name = "LabelInstructionSingle";
             this.LabelInstructionSingle.Size = new System.Drawing.Size(559, 316);
             this.LabelInstructionSingle.TabIndex = 14;
-            this.LabelInstructionSingle.Text = "Click Start to begin.";
+            this.LabelInstructionSingle.Text = "Click Start or pres Enter to begin.";
             this.LabelInstructionSingle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CheckBoxSymbolsSingle
@@ -134,10 +135,9 @@
             this.CheckBoxSymbolsSingle.Location = new System.Drawing.Point(469, 372);
             this.CheckBoxSymbolsSingle.Name = "CheckBoxSymbolsSingle";
             this.CheckBoxSymbolsSingle.Size = new System.Drawing.Size(65, 17);
-            this.CheckBoxSymbolsSingle.TabIndex = 8;
+            this.CheckBoxSymbolsSingle.TabIndex = 2;
             this.CheckBoxSymbolsSingle.Text = "Symbols";
             this.CheckBoxSymbolsSingle.UseVisualStyleBackColor = true;
-            this.CheckBoxSymbolsSingle.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormDisplay_KeyDown);
             // 
             // LabelKphSingle
             // 
@@ -145,9 +145,10 @@
             this.LabelKphSingle.AutoSize = true;
             this.LabelKphSingle.Location = new System.Drawing.Point(353, 373);
             this.LabelKphSingle.Name = "LabelKphSingle";
-            this.LabelKphSingle.Size = new System.Drawing.Size(36, 13);
+            this.LabelKphSingle.Size = new System.Drawing.Size(54, 13);
             this.LabelKphSingle.TabIndex = 13;
-            this.LabelKphSingle.Text = "KPH : ";
+            this.LabelKphSingle.Text = "KPH :     0";
+            this.LabelKphSingle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LabelBadSingle
             // 
@@ -155,9 +156,10 @@
             this.LabelBadSingle.AutoSize = true;
             this.LabelBadSingle.Location = new System.Drawing.Point(287, 373);
             this.LabelBadSingle.Name = "LabelBadSingle";
-            this.LabelBadSingle.Size = new System.Drawing.Size(41, 13);
+            this.LabelBadSingle.Size = new System.Drawing.Size(47, 13);
             this.LabelBadSingle.TabIndex = 12;
-            this.LabelBadSingle.Text = "Error : ";
+            this.LabelBadSingle.Text = "Error : 0";
+            this.LabelBadSingle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LabelGoodSingle
             // 
@@ -165,9 +167,10 @@
             this.LabelGoodSingle.AutoSize = true;
             this.LabelGoodSingle.Location = new System.Drawing.Point(216, 373);
             this.LabelGoodSingle.Name = "LabelGoodSingle";
-            this.LabelGoodSingle.Size = new System.Drawing.Size(46, 13);
+            this.LabelGoodSingle.Size = new System.Drawing.Size(52, 13);
             this.LabelGoodSingle.TabIndex = 11;
-            this.LabelGoodSingle.Text = "Count : ";
+            this.LabelGoodSingle.Text = "Count : 0";
+            this.LabelGoodSingle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LabelTimeSingle
             // 
@@ -175,9 +178,10 @@
             this.LabelTimeSingle.AutoSize = true;
             this.LabelTimeSingle.Location = new System.Drawing.Point(97, 373);
             this.LabelTimeSingle.Name = "LabelTimeSingle";
-            this.LabelTimeSingle.Size = new System.Drawing.Size(36, 13);
+            this.LabelTimeSingle.Size = new System.Drawing.Size(97, 13);
             this.LabelTimeSingle.TabIndex = 10;
-            this.LabelTimeSingle.Text = "Time: ";
+            this.LabelTimeSingle.Text = "Time :  0h 00m 00s";
+            this.LabelTimeSingle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ButtonStopSingle
             // 
@@ -186,7 +190,7 @@
             this.ButtonStopSingle.Location = new System.Drawing.Point(539, 368);
             this.ButtonStopSingle.Name = "ButtonStopSingle";
             this.ButtonStopSingle.Size = new System.Drawing.Size(75, 23);
-            this.ButtonStopSingle.TabIndex = 9;
+            this.ButtonStopSingle.TabIndex = 1;
             this.ButtonStopSingle.Text = "Stop";
             this.ButtonStopSingle.UseVisualStyleBackColor = true;
             this.ButtonStopSingle.Click += new System.EventHandler(this.ButtonStopSingle_Click);
@@ -198,7 +202,7 @@
             this.ButtonStartSingle.Location = new System.Drawing.Point(9, 368);
             this.ButtonStartSingle.Name = "ButtonStartSingle";
             this.ButtonStartSingle.Size = new System.Drawing.Size(75, 23);
-            this.ButtonStartSingle.TabIndex = 7;
+            this.ButtonStartSingle.TabIndex = 0;
             this.ButtonStartSingle.Text = "Start";
             this.ButtonStartSingle.UseVisualStyleBackColor = true;
             this.ButtonStartSingle.Click += new System.EventHandler(this.ButtonStartSingle_Click);
@@ -206,6 +210,7 @@
             // 
             // TabPageMultiple
             // 
+            this.TabPageMultiple.Controls.Add(this.LabelKphAverageMultiple);
             this.TabPageMultiple.Controls.Add(this.CheckBoxSymbolsMultiple);
             this.TabPageMultiple.Controls.Add(this.LabelKphMultiple);
             this.TabPageMultiple.Controls.Add(this.LabelBadMultiple);
@@ -217,11 +222,110 @@
             this.TabPageMultiple.Controls.Add(this.TableLayoutPanelMultiple);
             this.TabPageMultiple.Location = new System.Drawing.Point(4, 22);
             this.TabPageMultiple.Name = "TabPageMultiple";
-            this.TabPageMultiple.Padding = new System.Windows.Forms.Padding(3);
+            this.TabPageMultiple.Padding = new System.Windows.Forms.Padding(12, 3, 3, 3);
             this.TabPageMultiple.Size = new System.Drawing.Size(623, 398);
             this.TabPageMultiple.TabIndex = 1;
             this.TabPageMultiple.Text = "Multiple Numbers Practice";
             this.TabPageMultiple.UseVisualStyleBackColor = true;
+            // 
+            // LabelKphAverageMultiple
+            // 
+            this.LabelKphAverageMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LabelKphAverageMultiple.Location = new System.Drawing.Point(391, 15);
+            this.LabelKphAverageMultiple.Name = "LabelKphAverageMultiple";
+            this.LabelKphAverageMultiple.Size = new System.Drawing.Size(216, 13);
+            this.LabelKphAverageMultiple.TabIndex = 23;
+            this.LabelKphAverageMultiple.Text = "Average KPH : 0";
+            this.LabelKphAverageMultiple.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // CheckBoxSymbolsMultiple
+            // 
+            this.CheckBoxSymbolsMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CheckBoxSymbolsMultiple.AutoSize = true;
+            this.CheckBoxSymbolsMultiple.Location = new System.Drawing.Point(469, 372);
+            this.CheckBoxSymbolsMultiple.Name = "CheckBoxSymbolsMultiple";
+            this.CheckBoxSymbolsMultiple.Size = new System.Drawing.Size(65, 17);
+            this.CheckBoxSymbolsMultiple.TabIndex = 2;
+            this.CheckBoxSymbolsMultiple.Text = "Symbols";
+            this.CheckBoxSymbolsMultiple.UseVisualStyleBackColor = true;
+            // 
+            // LabelKphMultiple
+            // 
+            this.LabelKphMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LabelKphMultiple.AutoSize = true;
+            this.LabelKphMultiple.Location = new System.Drawing.Point(353, 373);
+            this.LabelKphMultiple.Name = "LabelKphMultiple";
+            this.LabelKphMultiple.Size = new System.Drawing.Size(54, 13);
+            this.LabelKphMultiple.TabIndex = 20;
+            this.LabelKphMultiple.Text = "KPH :     0";
+            this.LabelKphMultiple.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LabelBadMultiple
+            // 
+            this.LabelBadMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LabelBadMultiple.AutoSize = true;
+            this.LabelBadMultiple.Location = new System.Drawing.Point(287, 373);
+            this.LabelBadMultiple.Name = "LabelBadMultiple";
+            this.LabelBadMultiple.Size = new System.Drawing.Size(47, 13);
+            this.LabelBadMultiple.TabIndex = 19;
+            this.LabelBadMultiple.Text = "Error : 0";
+            this.LabelBadMultiple.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LabelGoodMultiple
+            // 
+            this.LabelGoodMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LabelGoodMultiple.AutoSize = true;
+            this.LabelGoodMultiple.Location = new System.Drawing.Point(216, 373);
+            this.LabelGoodMultiple.Name = "LabelGoodMultiple";
+            this.LabelGoodMultiple.Size = new System.Drawing.Size(52, 13);
+            this.LabelGoodMultiple.TabIndex = 18;
+            this.LabelGoodMultiple.Text = "Count : 0";
+            this.LabelGoodMultiple.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LabelTimeMultiple
+            // 
+            this.LabelTimeMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LabelTimeMultiple.AutoSize = true;
+            this.LabelTimeMultiple.Location = new System.Drawing.Point(97, 373);
+            this.LabelTimeMultiple.Name = "LabelTimeMultiple";
+            this.LabelTimeMultiple.Size = new System.Drawing.Size(97, 13);
+            this.LabelTimeMultiple.TabIndex = 17;
+            this.LabelTimeMultiple.Text = "Time :  0h 00m 00s";
+            this.LabelTimeMultiple.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ButtonStopMultiple
+            // 
+            this.ButtonStopMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonStopMultiple.Enabled = false;
+            this.ButtonStopMultiple.Location = new System.Drawing.Point(539, 368);
+            this.ButtonStopMultiple.Name = "ButtonStopMultiple";
+            this.ButtonStopMultiple.Size = new System.Drawing.Size(75, 23);
+            this.ButtonStopMultiple.TabIndex = 1;
+            this.ButtonStopMultiple.Text = "Stop";
+            this.ButtonStopMultiple.UseVisualStyleBackColor = true;
+            this.ButtonStopMultiple.Click += new System.EventHandler(this.ButtonStopMultiple_Click);
+            this.ButtonStopMultiple.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormDisplay_KeyDown);
+            // 
+            // ButtonStartMultiple
+            // 
+            this.ButtonStartMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ButtonStartMultiple.Location = new System.Drawing.Point(9, 368);
+            this.ButtonStartMultiple.Name = "ButtonStartMultiple";
+            this.ButtonStartMultiple.Size = new System.Drawing.Size(75, 23);
+            this.ButtonStartMultiple.TabIndex = 0;
+            this.ButtonStartMultiple.Text = "Start";
+            this.ButtonStartMultiple.UseVisualStyleBackColor = true;
+            this.ButtonStartMultiple.Click += new System.EventHandler(this.ButtonStartMultiple_Click);
+            this.ButtonStartMultiple.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormDisplay_KeyDown);
+            // 
+            // LabelInstructionsMultiple
+            // 
+            this.LabelInstructionsMultiple.Location = new System.Drawing.Point(31, 38);
+            this.LabelInstructionsMultiple.Name = "LabelInstructionsMultiple";
+            this.LabelInstructionsMultiple.Size = new System.Drawing.Size(561, 322);
+            this.LabelInstructionsMultiple.TabIndex = 21;
+            this.LabelInstructionsMultiple.Text = "Click Start or pres Enter to begin.";
+            this.LabelInstructionsMultiple.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TableLayoutPanelMultiple
             // 
@@ -243,11 +347,12 @@
             this.TableLayoutPanelMultiple.Controls.Add(this.LabelDigitMultiple3, 1, 0);
             this.TableLayoutPanelMultiple.Controls.Add(this.LabelDigitMultiple1, 0, 0);
             this.TableLayoutPanelMultiple.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TableLayoutPanelMultiple.Location = new System.Drawing.Point(3, 3);
+            this.TableLayoutPanelMultiple.Location = new System.Drawing.Point(12, 3);
+            this.TableLayoutPanelMultiple.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.TableLayoutPanelMultiple.Name = "TableLayoutPanelMultiple";
             this.TableLayoutPanelMultiple.RowCount = 1;
             this.TableLayoutPanelMultiple.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TableLayoutPanelMultiple.Size = new System.Drawing.Size(617, 392);
+            this.TableLayoutPanelMultiple.Size = new System.Drawing.Size(608, 392);
             this.TableLayoutPanelMultiple.TabIndex = 22;
             // 
             // LabelDigitMultiple2
@@ -255,9 +360,10 @@
             this.LabelDigitMultiple2.AutoSize = true;
             this.LabelDigitMultiple2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelDigitMultiple2.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDigitMultiple2.Location = new System.Drawing.Point(80, 0);
+            this.LabelDigitMultiple2.Location = new System.Drawing.Point(76, 0);
+            this.LabelDigitMultiple2.Margin = new System.Windows.Forms.Padding(0);
             this.LabelDigitMultiple2.Name = "LabelDigitMultiple2";
-            this.LabelDigitMultiple2.Size = new System.Drawing.Size(71, 392);
+            this.LabelDigitMultiple2.Size = new System.Drawing.Size(76, 392);
             this.LabelDigitMultiple2.TabIndex = 7;
             this.LabelDigitMultiple2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelDigitMultiple2.Resize += new System.EventHandler(this.LabelDigitMultiple_Resize);
@@ -267,9 +373,10 @@
             this.LabelDigitMultiple8.AutoSize = true;
             this.LabelDigitMultiple8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelDigitMultiple8.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDigitMultiple8.Location = new System.Drawing.Point(542, 0);
+            this.LabelDigitMultiple8.Location = new System.Drawing.Point(532, 0);
+            this.LabelDigitMultiple8.Margin = new System.Windows.Forms.Padding(0);
             this.LabelDigitMultiple8.Name = "LabelDigitMultiple8";
-            this.LabelDigitMultiple8.Size = new System.Drawing.Size(72, 392);
+            this.LabelDigitMultiple8.Size = new System.Drawing.Size(76, 392);
             this.LabelDigitMultiple8.TabIndex = 6;
             this.LabelDigitMultiple8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelDigitMultiple8.Resize += new System.EventHandler(this.LabelDigitMultiple_Resize);
@@ -279,9 +386,10 @@
             this.LabelDigitMultiple7.AutoSize = true;
             this.LabelDigitMultiple7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelDigitMultiple7.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDigitMultiple7.Location = new System.Drawing.Point(465, 0);
+            this.LabelDigitMultiple7.Location = new System.Drawing.Point(456, 0);
+            this.LabelDigitMultiple7.Margin = new System.Windows.Forms.Padding(0);
             this.LabelDigitMultiple7.Name = "LabelDigitMultiple7";
-            this.LabelDigitMultiple7.Size = new System.Drawing.Size(71, 392);
+            this.LabelDigitMultiple7.Size = new System.Drawing.Size(76, 392);
             this.LabelDigitMultiple7.TabIndex = 5;
             this.LabelDigitMultiple7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelDigitMultiple7.Resize += new System.EventHandler(this.LabelDigitMultiple_Resize);
@@ -291,9 +399,10 @@
             this.LabelDigitMultiple6.AutoSize = true;
             this.LabelDigitMultiple6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelDigitMultiple6.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDigitMultiple6.Location = new System.Drawing.Point(388, 0);
+            this.LabelDigitMultiple6.Location = new System.Drawing.Point(380, 0);
+            this.LabelDigitMultiple6.Margin = new System.Windows.Forms.Padding(0);
             this.LabelDigitMultiple6.Name = "LabelDigitMultiple6";
-            this.LabelDigitMultiple6.Size = new System.Drawing.Size(71, 392);
+            this.LabelDigitMultiple6.Size = new System.Drawing.Size(76, 392);
             this.LabelDigitMultiple6.TabIndex = 4;
             this.LabelDigitMultiple6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelDigitMultiple6.Resize += new System.EventHandler(this.LabelDigitMultiple_Resize);
@@ -303,9 +412,10 @@
             this.LabelDigitMultiple5.AutoSize = true;
             this.LabelDigitMultiple5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelDigitMultiple5.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDigitMultiple5.Location = new System.Drawing.Point(311, 0);
+            this.LabelDigitMultiple5.Location = new System.Drawing.Point(304, 0);
+            this.LabelDigitMultiple5.Margin = new System.Windows.Forms.Padding(0);
             this.LabelDigitMultiple5.Name = "LabelDigitMultiple5";
-            this.LabelDigitMultiple5.Size = new System.Drawing.Size(71, 392);
+            this.LabelDigitMultiple5.Size = new System.Drawing.Size(76, 392);
             this.LabelDigitMultiple5.TabIndex = 3;
             this.LabelDigitMultiple5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelDigitMultiple5.Resize += new System.EventHandler(this.LabelDigitMultiple_Resize);
@@ -315,9 +425,10 @@
             this.LabelDigitMultiple4.AutoSize = true;
             this.LabelDigitMultiple4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelDigitMultiple4.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDigitMultiple4.Location = new System.Drawing.Point(234, 0);
+            this.LabelDigitMultiple4.Location = new System.Drawing.Point(228, 0);
+            this.LabelDigitMultiple4.Margin = new System.Windows.Forms.Padding(0);
             this.LabelDigitMultiple4.Name = "LabelDigitMultiple4";
-            this.LabelDigitMultiple4.Size = new System.Drawing.Size(71, 392);
+            this.LabelDigitMultiple4.Size = new System.Drawing.Size(76, 392);
             this.LabelDigitMultiple4.TabIndex = 2;
             this.LabelDigitMultiple4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelDigitMultiple4.Resize += new System.EventHandler(this.LabelDigitMultiple_Resize);
@@ -327,9 +438,10 @@
             this.LabelDigitMultiple3.AutoSize = true;
             this.LabelDigitMultiple3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelDigitMultiple3.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDigitMultiple3.Location = new System.Drawing.Point(157, 0);
+            this.LabelDigitMultiple3.Location = new System.Drawing.Point(152, 0);
+            this.LabelDigitMultiple3.Margin = new System.Windows.Forms.Padding(0);
             this.LabelDigitMultiple3.Name = "LabelDigitMultiple3";
-            this.LabelDigitMultiple3.Size = new System.Drawing.Size(71, 392);
+            this.LabelDigitMultiple3.Size = new System.Drawing.Size(76, 392);
             this.LabelDigitMultiple3.TabIndex = 1;
             this.LabelDigitMultiple3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelDigitMultiple3.Resize += new System.EventHandler(this.LabelDigitMultiple_Resize);
@@ -339,98 +451,13 @@
             this.LabelDigitMultiple1.AutoSize = true;
             this.LabelDigitMultiple1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelDigitMultiple1.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDigitMultiple1.Location = new System.Drawing.Point(3, 0);
+            this.LabelDigitMultiple1.Location = new System.Drawing.Point(0, 0);
+            this.LabelDigitMultiple1.Margin = new System.Windows.Forms.Padding(0);
             this.LabelDigitMultiple1.Name = "LabelDigitMultiple1";
-            this.LabelDigitMultiple1.Size = new System.Drawing.Size(71, 392);
+            this.LabelDigitMultiple1.Size = new System.Drawing.Size(76, 392);
             this.LabelDigitMultiple1.TabIndex = 0;
             this.LabelDigitMultiple1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelDigitMultiple1.Resize += new System.EventHandler(this.LabelDigitMultiple_Resize);
-            // 
-            // CheckBoxSymbolsMultiple
-            // 
-            this.CheckBoxSymbolsMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.CheckBoxSymbolsMultiple.AutoSize = true;
-            this.CheckBoxSymbolsMultiple.Location = new System.Drawing.Point(469, 372);
-            this.CheckBoxSymbolsMultiple.Name = "CheckBoxSymbolsMultiple";
-            this.CheckBoxSymbolsMultiple.Size = new System.Drawing.Size(65, 17);
-            this.CheckBoxSymbolsMultiple.TabIndex = 15;
-            this.CheckBoxSymbolsMultiple.Text = "Symbols";
-            this.CheckBoxSymbolsMultiple.UseVisualStyleBackColor = true;
-            this.CheckBoxSymbolsMultiple.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormDisplay_KeyDown);
-            // 
-            // LabelKphMultiple
-            // 
-            this.LabelKphMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LabelKphMultiple.AutoSize = true;
-            this.LabelKphMultiple.Location = new System.Drawing.Point(353, 373);
-            this.LabelKphMultiple.Name = "LabelKphMultiple";
-            this.LabelKphMultiple.Size = new System.Drawing.Size(36, 13);
-            this.LabelKphMultiple.TabIndex = 20;
-            this.LabelKphMultiple.Text = "KPH : ";
-            // 
-            // LabelBadMultiple
-            // 
-            this.LabelBadMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LabelBadMultiple.AutoSize = true;
-            this.LabelBadMultiple.Location = new System.Drawing.Point(287, 373);
-            this.LabelBadMultiple.Name = "LabelBadMultiple";
-            this.LabelBadMultiple.Size = new System.Drawing.Size(41, 13);
-            this.LabelBadMultiple.TabIndex = 19;
-            this.LabelBadMultiple.Text = "Error : ";
-            // 
-            // LabelGoodMultiple
-            // 
-            this.LabelGoodMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LabelGoodMultiple.AutoSize = true;
-            this.LabelGoodMultiple.Location = new System.Drawing.Point(216, 373);
-            this.LabelGoodMultiple.Name = "LabelGoodMultiple";
-            this.LabelGoodMultiple.Size = new System.Drawing.Size(46, 13);
-            this.LabelGoodMultiple.TabIndex = 18;
-            this.LabelGoodMultiple.Text = "Count : ";
-            // 
-            // LabelTimeMultiple
-            // 
-            this.LabelTimeMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LabelTimeMultiple.AutoSize = true;
-            this.LabelTimeMultiple.Location = new System.Drawing.Point(97, 373);
-            this.LabelTimeMultiple.Name = "LabelTimeMultiple";
-            this.LabelTimeMultiple.Size = new System.Drawing.Size(36, 13);
-            this.LabelTimeMultiple.TabIndex = 17;
-            this.LabelTimeMultiple.Text = "Time: ";
-            // 
-            // ButtonStopMultiple
-            // 
-            this.ButtonStopMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonStopMultiple.Enabled = false;
-            this.ButtonStopMultiple.Location = new System.Drawing.Point(539, 368);
-            this.ButtonStopMultiple.Name = "ButtonStopMultiple";
-            this.ButtonStopMultiple.Size = new System.Drawing.Size(75, 23);
-            this.ButtonStopMultiple.TabIndex = 16;
-            this.ButtonStopMultiple.Text = "Stop";
-            this.ButtonStopMultiple.UseVisualStyleBackColor = true;
-            this.ButtonStopMultiple.Click += new System.EventHandler(this.ButtonStopMultiple_Click);
-            this.ButtonStopMultiple.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormDisplay_KeyDown);
-            // 
-            // ButtonStartMultiple
-            // 
-            this.ButtonStartMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ButtonStartMultiple.Location = new System.Drawing.Point(9, 368);
-            this.ButtonStartMultiple.Name = "ButtonStartMultiple";
-            this.ButtonStartMultiple.Size = new System.Drawing.Size(75, 23);
-            this.ButtonStartMultiple.TabIndex = 14;
-            this.ButtonStartMultiple.Text = "Start";
-            this.ButtonStartMultiple.UseVisualStyleBackColor = true;
-            this.ButtonStartMultiple.Click += new System.EventHandler(this.ButtonStartMultiple_Click);
-            this.ButtonStartMultiple.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormDisplay_KeyDown);
-            // 
-            // LabelInstructionsMultiple
-            // 
-            this.LabelInstructionsMultiple.Location = new System.Drawing.Point(31, 38);
-            this.LabelInstructionsMultiple.Name = "LabelInstructionsMultiple";
-            this.LabelInstructionsMultiple.Size = new System.Drawing.Size(561, 322);
-            this.LabelInstructionsMultiple.TabIndex = 21;
-            this.LabelInstructionsMultiple.Text = "Click Start to begin.";
-            this.LabelInstructionsMultiple.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormPractice
             // 
@@ -490,5 +517,6 @@
         private System.Windows.Forms.Label LabelDigitMultiple3;
         private System.Windows.Forms.Label LabelDigitMultiple1;
         private System.Windows.Forms.Label LabelDigitMultiple2;
+        private System.Windows.Forms.Label LabelKphAverageMultiple;
     }
 }

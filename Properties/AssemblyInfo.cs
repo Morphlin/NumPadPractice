@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("NumPad Practice")]
 [assembly: AssemblyDescription("Utility to practice NumPad typing quickly while avoiding typos.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Gartech")]
+[assembly: AssemblyCompany("Garnote-Technologies")]
 [assembly: AssemblyProduct("NumPad Practice")]
 [assembly: AssemblyCopyright("Copyright © Gartech 2015")]
 [assembly: AssemblyTrademark("2015-08-14")]
